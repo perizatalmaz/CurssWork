@@ -1,0 +1,146 @@
+.settings-page {
+  min-height: 100vh;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.settings-box {
+  background: #2b2b3b;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.btn-back-s {
+  background: transparent;
+  color: #aaa;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.btn-back-s:hover {
+  color: #fff;
+}
+
+.settings-title {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.settings-sub {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.settings-msg {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.settings-msg.ok {
+  background: #1b5e20;
+  color: #a5d6a7;
+}
+
+.settings-msg.err {
+  background: #b71c1c;
+  color: #ffcdd2;
+}
+
+.settings-card {
+  background: #3a3a4a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.settings-card h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.settings-card p {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.pin-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.pin-inputs input {
+  background: #2b2b3b;
+  border: 1px solid #555;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 16px;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+.pin-inputs input:focus {
+  outline: none;
+  border-color: #c8b400;
+}
+
+.btn-save-pin {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-save-pin.admin {
+  background: #4472c4;
+  color: #fff;
+}
+
+.btn-save-pin.admin:hover {
+  background: #5482d4;
+}
+
+.btn-save-pin.waiter {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.btn-save-pin.waiter:hover {
+  background: #3e8d42;
+}
+
+.btn-logout {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #4a2020;
+  color: #ffcdd2;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-logout:hover {
+  background: #5a2a2a;
+}

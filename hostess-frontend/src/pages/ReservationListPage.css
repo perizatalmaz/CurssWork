@@ -1,0 +1,231 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #2b2b2b;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background: #222233;
+  border-bottom: 1px solid #444;
+}
+
+.user-label {
+  color: #c8b400;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-settings {
+  background: #3a3a4a;
+  color: #ccc;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-settings:hover {
+  background: #4a4a5a;
+  color: #fff;
+}
+
+.btn-settings.logout {
+  background: #4a2020;
+  color: #ffcdd2;
+}
+
+.btn-settings.logout:hover {
+  background: #5a2a2a;
+}
+
+.header {
+  background: #3a3a3a;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.tab {
+  padding: 10px 24px;
+  background: #4a4a4a;
+  color: #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background: #5a5a5a;
+}
+
+.tab.active {
+  background: #c8b400;
+  color: #000;
+}
+
+.tab.active-only {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.date-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4a7a8a;
+  padding: 12px;
+  gap: 30px;
+}
+
+.date-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  min-width: 260px;
+  text-align: center;
+}
+
+.date-arrow {
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.date-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reservations-table thead tr {
+  background: #3a3a3a;
+  color: #aaa;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.reservations-table th {
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.reservations-table tbody tr {
+  border-bottom: 2px solid #444;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.reservations-table tbody tr:hover {
+  background: #3a3a3a;
+}
+
+.reservations-table td {
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+.sub {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.status-late {
+  background: #8b2020 !important;
+}
+
+.status-preparing {
+  background: #5a4a00 !important;
+}
+
+.status-cancelled {
+  opacity: 0.5;
+}
+
+.btn-cancel {
+  background: #555;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.btn-cancel:hover {
+  background: #8b2020;
+}
+
+.btn-restore {
+  background: #2e7d32;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.btn-restore:hover {
+  background: #1b5e20;
+}
+
+.loading,
+.empty {
+  text-align: center;
+  padding: 40px;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.bottom-bar {
+  background: #3a3a3a;
+  padding: 12px 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  border-top: 2px solid #555;
+}
+
+.btn-new {
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-new.reserve {
+  background: #4a7a8a;
+}
+
+.btn-new.reserve:hover {
+  background: #5a8a9a;
+}
+
+.btn-new.banquet {
+  background: #c8b400;
+  color: #000;
+}
+
+.btn-new.banquet:hover {
+  background: #d8c400;
+}
