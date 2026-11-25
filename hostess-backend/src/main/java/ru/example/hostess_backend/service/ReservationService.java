@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
 
-// Сервис для управления бронированиями
 @Service
 @RequiredArgsConstructor
 public class ReservationService {
@@ -18,29 +17,24 @@ public class ReservationService {
     private final GuestService guestService;
     private final TableService tableService;
 
-    // Получить все бронирования на указанную дату
     public List<Reservation> getReservationsByDate(LocalDate date) {
         return reservationRepository.findByDate(date);
     }
 
-    // Получить бронирования по дате и типу
     public List<Reservation> getReservationsByDateAndType(LocalDate date,
                                                            Reservation.ReservationType type) {
         return reservationRepository.findByDateAndType(date, type);
     }
 
-    // Найти бронирование по идентификатору
     public Reservation getReservationById(Long id) {
         return reservationRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Бронь не найдена: " + id));
     }
 
-    // Создать новое бронирование с проверкой занятости стола
     public Reservation createReservation(Long guestId, Long tableId, Reservation reservation) {
         Guest guest = guestService.getGuestById(guestId);
         RestaurantTable table = tableService.getTableById(tableId);
 
-        // Проверяем что стол свободен в указанное время
         boolean available = tableService.isTableAvailable(
                 table, reservation.getDate(),
                 reservation.getTimeStart(), reservation.getDurationHours());
@@ -55,19 +49,16 @@ public class ReservationService {
         return reservationRepository.save(reservation);
     }
 
-    // Изменить статус бронирования
     public Reservation updateStatus(Long id, Reservation.ReservationStatus status) {
         Reservation reservation = getReservationById(id);
         reservation.setStatus(status);
         return reservationRepository.save(reservation);
     }
 
-    // Отменить бронирование
     public Reservation cancelReservation(Long id) {
         return updateStatus(id, Reservation.ReservationStatus.CANCELLED);
     }
 
-    // Обновить данные бронирования
     public Reservation updateReservation(Long id, Reservation updated) {
         Reservation existing = getReservationById(id);
         existing.setDate(updated.getDate());
@@ -78,7 +69,6 @@ public class ReservationService {
         return reservationRepository.save(existing);
     }
 
-    // Удалить бронирование
     public void deleteReservation(Long id) {
         reservationRepository.deleteById(id);
     }
